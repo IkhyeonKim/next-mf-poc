@@ -8,7 +8,9 @@ const mfConfig = {
   filename: "static/chunks/remoteEntry.js",
   exposes: {
     "./Setup": "./src/pages/setup/index.tsx",
-    "./SetupComponent": "./src/components/SetupPage.tsx",
+    "./Dashboard": "./src/pages/dashboard/index.tsx",
+    "./Sample": "./src/pages/sample/index.tsx",
+    "./page-map": "./src/page-map.ts",
   },
   shared: {
     "next/config": {

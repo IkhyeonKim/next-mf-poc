@@ -1,8 +1,5 @@
-"use client";
-
-import UseIsMount from "@/hooks/UseIsMount";
-import dynamic from "next/dynamic";
-import { Suspense, lazy, useEffect, useState } from "react";
+import useIsMount from "@/hooks/useIsMount";
+import { Suspense, lazy } from "react";
 // const SetupPage = lazy(() => import("apc/Setup"));
 // const SetupPage = dynamic(() => import("apc/Setup"), { ssr: false });
 
@@ -47,7 +44,7 @@ type PageProps = {
 export default function ApcMain({ foo }: PageProps) {
   console.log({ foo });
 
-  const mounted = UseIsMount();
+  const mounted = useIsMount();
 
   if (!mounted) return <div>Loading!!!</div>;
 
