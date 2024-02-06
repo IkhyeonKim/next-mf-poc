@@ -1,5 +1,5 @@
 export default {
-  "/Dashboard": "./Dashboard",
-  "/Setup": "./Setup",
-  "/Sample": "./Sample",
+  "dashboard": "./Dashboard",
+  "setup": "./Setup",
+  "sample": "./Sample",
 };

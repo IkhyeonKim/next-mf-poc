@@ -13,7 +13,17 @@ type PageParams = {
 export default function ApcPage({ params }: PageParams) {
   const router = useRouter();
   const pathname = usePathname();
-  const targetModule = useModule(pathname, "apc");
-  console.log({ router, pathname, remoteVars });
-  return <div>APC: {params?.slug}</div>;
+  const targetModule: any = useModule(pathname, "apc");
+
+  if (targetModule === undefined || targetModule === "Loading") {
+    return <div>Loading...</div>;
+  }
+  if (targetModule === null) return <div>Module not found</div>;
+
+  return (
+    <div>
+      APC Portal
+      <div>{targetModule}</div>
+    </div>
+  );
 }
